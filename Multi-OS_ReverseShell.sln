@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Multi-OS_ReverseShell", "Multi-OS_ReverseShell\Multi-OS_ReverseShell.csproj", "{DF0DD7A1-9F6B-4B0F-801E-E17E73B0801D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DF0DD7A1-9F6B-4B0F-801E-E17E73B0801D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF0DD7A1-9F6B-4B0F-801E-E17E73B0801D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF0DD7A1-9F6B-4B0F-801E-E17E73B0801D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DF0DD7A1-9F6B-4B0F-801E-E17E73B0801D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
